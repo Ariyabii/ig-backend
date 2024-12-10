@@ -6,16 +6,6 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 
-import imageToAdd from "./../assets/images/logo.png";
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-
 import { Bookmark } from "lucide-react";
 import { Heart } from "lucide-react";
 import { MessageCircle } from "lucide-react";
@@ -61,7 +51,9 @@ const Page = () => {
         return (
           <Card key={post._id} className="w-fit">
             <div></div>
-            <CardHeader>{/* <div>{post.userId.username}</div> */}</CardHeader>
+            <CardHeader>
+              <div>{post.userId.username}</div>
+            </CardHeader>
             <CardContent>
               <img src={post.profileImage} width="340px" height="600px" />
             </CardContent>
